@@ -82,7 +82,7 @@ function CustomFooter() {
                         ]
                     }
                 ]}
-                bottom="Made with ❤️ by AFX"
+                bottom="Footer Made with ❤️ by AFX | Clone Developer: Parth Dubal | Github: https://github.com/Parth00"
             />,
 
         </div>

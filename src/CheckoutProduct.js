@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import './CheckoutProduct.css'
 import FlipMove from "react-flip-move"
@@ -11,23 +10,12 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
 
     const removeFromBasket = () => {
         setFadeOut(1);
-=======
-import React from 'react'
-import './CheckoutProduct.css'
-import { useStateValue } from './StateProvider'
-
-function CheckoutProduct({ id, image, title, price, rating }) {
-    const [{ }, dispatch] = useStateValue();
-
-    const removeFromBasket = () => {
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
         // remove the item from the basket
         dispatch({
             type: 'REMOVE_FROM_BASKET',
             id: id,
         })
 
-<<<<<<< HEAD
         store.addNotification({
             title: "Removed from the basket!",
             message: title + " - $" + price,
@@ -47,12 +35,6 @@ function CheckoutProduct({ id, image, title, price, rating }) {
 
         <div className={fadeOut > 0 ? 'checkoutProduct fade-out' : 'checkoutProduct'} onAnimationEnd={() => setFadeOut(0)}>
 
-=======
-    }
-
-    return (
-        <div className='checkoutProduct'>
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
             <img className='checkoutProduct__image' src={image} alt="" />
 
             <div className='checkoutProduct__info'>
@@ -71,7 +53,6 @@ function CheckoutProduct({ id, image, title, price, rating }) {
                         ))}
                     </p>
                 </div>
-<<<<<<< HEAD
 
                 {!hideButton && (
                     <button className="checkoutProduct__button" onClick={removeFromBasket}>Remove from basket</button>
@@ -79,11 +60,6 @@ function CheckoutProduct({ id, image, title, price, rating }) {
 
             </div>
         </div >
-=======
-                <button onClick={removeFromBasket}>Remove from basket</button>
-            </div>
-        </div>
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
     )
 }
 

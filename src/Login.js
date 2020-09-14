@@ -1,12 +1,8 @@
 import React, { useState } from 'react'
 import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
-<<<<<<< HEAD
 import { auth } from "./firebase";
 import { store } from 'react-notifications-component';
-=======
-import { auth } from "./firebase"
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
 
 function Login() {
     const history = useHistory();
@@ -19,7 +15,6 @@ function Login() {
         auth
             .signInWithEmailAndPassword(email, password)
             .then(auth => {
-<<<<<<< HEAD
                 store.addNotification({
                     title: "Success!",
                     message: "Login successful!",
@@ -52,12 +47,6 @@ function Login() {
                     }
                 })
             });
-=======
-                console.log(auth);
-                history.push('/')
-            })
-            .catch(error => alert(error.message))
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
     }
 
     const register = e => {
@@ -68,7 +57,6 @@ function Login() {
             .then((auth) => {
                 // successfully created a new user with email and password
                 if (auth) {
-<<<<<<< HEAD
                     setEmail('');
                     setPassword('');
                     store.addNotification({
@@ -104,12 +92,6 @@ function Login() {
                     }
                 })
             });
-=======
-                    history.push('/login')
-                }
-            })
-            .catch(error => alert(error.message))
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
     }
 
     return (
@@ -119,13 +101,10 @@ function Login() {
                     className="login__logo"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" alt=""
                 />
-<<<<<<< HEAD
                 {/* <img
                     className="login__logo"
                     src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt=""
                 /> */}
-=======
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
             </Link>
 
             <div className="login__container">
@@ -146,12 +125,9 @@ function Login() {
 
                     <button onClick={register}
                         className="login__registerButton"> Create your Amazon Account </button>
-<<<<<<< HEAD
 
                     <button onClick={e => { history.push('/') }}
                         className="login__registerButton"> Continue using guest </button>
-=======
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
                 </form>
             </div>
         </div>
