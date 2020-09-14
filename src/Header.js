@@ -5,13 +5,17 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 import { auth } from "./firebase";
+<<<<<<< HEAD
 import { store } from 'react-notifications-component';
+=======
+>>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
 
 function Header() {
     const [{ basket, user }] = useStateValue();
 
     const handleAuthentication = () => {
         if (user) {
+<<<<<<< HEAD
             if (auth.signOut()) {
                 store.addNotification({
                     title: "Success!",
@@ -27,6 +31,9 @@ function Header() {
                     }
                 });
             }
+=======
+            auth.signOut();
+>>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
         }
     }
 
@@ -53,7 +60,11 @@ function Header() {
                 <Link to={!user && "/login"}>
                     <div onClick={handleAuthentication} className="header__option">
                         <span className="header__optionLineOne">
+<<<<<<< HEAD
                             {user ? "Hey " + user.email : "Hello Guest"}
+=======
+                            {user ? user.email : "Hello Guest"}
+>>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
                         </span>
 
                         <span className="header__optionLineTwo">
@@ -61,6 +72,7 @@ function Header() {
                         </span>
                     </div>
                 </Link>
+<<<<<<< HEAD
                 <Link to={'/orders'}>
                     <div className="header__option">
                         <span className="header__optionLineOne">
@@ -71,6 +83,16 @@ function Header() {
                     </span>
                     </div>
                 </Link>
+=======
+                <div className="header__option">
+                    <span className="header__optionLineOne">
+                        Returns
+                    </span>
+                    <span className="header__optionLineTwo">
+                        & Orders
+                    </span>
+                </div>
+>>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
                 <div className="header__option">
                     <span className="header__optionLineOne">
                         Your
