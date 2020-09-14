@@ -1,7 +1,10 @@
 import React from 'react'
 import './Product.css';
 import { useStateValue } from './StateProvider';
+<<<<<<< HEAD
 import { store } from 'react-notifications-component';
+=======
+>>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
 
 function Product({ id, title, image, price, rating }) {
     const [{ }, dispatch] = useStateValue();
@@ -18,6 +21,7 @@ function Product({ id, title, image, price, rating }) {
                 rating: rating
             },
         });
+<<<<<<< HEAD
 
         store.addNotification({
             title: "Added successfully to the basket!",
@@ -32,6 +36,8 @@ function Product({ id, title, image, price, rating }) {
                 onScreen: true
             }
         });
+=======
+>>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
     };
 
     return (
@@ -57,7 +63,11 @@ function Product({ id, title, image, price, rating }) {
                 alt=""
             />
 
+<<<<<<< HEAD
             <button className='fade' onClick={addToBasket}>Add to Basket</button>
+=======
+            <button onClick={addToBasket}>Add to Basket</button>
+>>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
         </div>
     )
 }
