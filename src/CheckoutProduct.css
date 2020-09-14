@@ -2,21 +2,14 @@
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
-<<<<<<< HEAD
   background-color: white;
-=======
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
 }
 
 .checkoutProduct__info {
   padding-left: 20px;
 }
 
-<<<<<<< HEAD
 .checkoutProduct__info>button {
-=======
-.checkoutProduct__info > button {
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
   background: #f0c14b;
   border: 1px solid;
   margin-top: 10px;
@@ -37,8 +30,4 @@
 .checkoutProduct__title {
   font-size: 17px;
   font-weight: 800;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3465c6d8817a3598a2da056508c15e1113414b49
